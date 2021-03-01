@@ -14,7 +14,7 @@ import { MatPaginator, MatSort, MatTableDataSource, MatDialog, MatSnackBar } fro
 })
 export class GeneralFilesComponent implements OnInit {
 
-  displayedColumns: string[] = ['link', 'name','origen', 'fecha', 'info'];
+  displayedColumns: string[] = ['name','origen', 'fecha', 'info','link'];
 
   formFile: FormGroup;
   public nombreArchivo = "";

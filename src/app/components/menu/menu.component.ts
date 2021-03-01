@@ -1,13 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/User.model';
 import { Router } from '@angular/router';
+import {MatTooltipModule} from '@angular/material';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css'],
+
 })
+
 export class MenuComponent implements OnInit {
+
+  existUser:boolean=false;
+
   /**
    * @param typeMenu tipo de menu de la vista existente estos pueden ser:  Alumno, Profesor y Adminsitrador
    */
@@ -46,8 +52,16 @@ export class MenuComponent implements OnInit {
     this.typeMenu=this.user.type;
     this.name= this.user.username;
     this.status = this.user.activated;
+    if(localStorage.getItem("user")!=undefined)
+      this.existUser=true;
+    else
+      this.existUser=false;
     // console.log(this.user)
     
+  }
+
+  exitAcount(){
+    this.router.navigateByUrl("");
   }
 
   /**
@@ -89,5 +103,10 @@ export class MenuComponent implements OnInit {
    */
   goToScoresUsers(){
     this.router.navigateByUrl("Scores");
+  }
+  //ir a configurar la cuenta actual
+  goConfigureAccount(){
+    console.log("CONFIGURARRR");
+    this.router.navigateByUrl("Configure-account");
   }
 }

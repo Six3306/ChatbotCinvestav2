@@ -27,6 +27,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { ClipboardModule } from 'ngx-clipboard';
 
 
@@ -49,11 +50,13 @@ import { ScoreUserComponent } from './dialogs/score-user/score-user.component';
 import { GeneralFilesComponent, CustomSnackBarComponentSendGeneralFile } from './components/general-files/general-files.component';
 import { RemindersComponent, CustomSnackBarComponent } from './components/reminders/reminders.component';
 import { GenerateKeyComponent } from './dialogs/generate-key/generate-key.component';
+import { ConfigureAccountComponent } from './components/configure-account/configure-account.component';
 
 /**
  * Variable para importar todas las librerias de angular material
  */
 const angularMaterial=[
+  MatSlideToggleModule,
   MatCheckboxModule,
   MatCardModule,
   MatButtonModule,
@@ -101,6 +104,7 @@ const angularMaterial=[
     CustomSnackBarComponentAddFilesChatbot,
     CustomSnackBarComponentAddScore,
     CustomSnackBarComponentLogin,
+    ConfigureAccountComponent,
   ],
   imports: [
     BrowserAnimationsModule,

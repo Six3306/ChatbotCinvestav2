@@ -9,10 +9,22 @@
 
 #copyK-btn {
     margin-left: 1.5%;
+    border-color: black;
+    /* background: #336479; */
+}
+
+#copyK-btn:hover {
+    box-shadow: 2px 2px 5px #999;
 }
 
 #btnOk {
-    background: #1D2B46;
+    border-color: black;
+    background: #3A445D;
     color: white;
     margin-left: 38%;
+}
+
+#btnOk:hover {
+    box-shadow: 2px 2px 5px #999;
+    background: #162138;
 }

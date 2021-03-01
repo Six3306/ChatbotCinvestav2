@@ -77,7 +77,7 @@
             <!-- Set Score Column -->
             <ng-container matColumnDef="calificar">
                 <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> </mat-header-cell>
-                <mat-cell *matCellDef="let row"> <button mat-raised-button class="btn btn-info" (click)="setScores(row)" *ngIf="materiaSelected"> Calificar</button> </mat-cell>
+                <mat-cell *matCellDef="let row"> <button mat-raised-button class="btn btn-info" (click)="setScores(row)" *ngIf="materiaSelected" id="btnSetScore"> Calificar</button> </mat-cell>
                 <mat-footer-cell *matFooterCellDef></mat-footer-cell>
             </ng-container>
 

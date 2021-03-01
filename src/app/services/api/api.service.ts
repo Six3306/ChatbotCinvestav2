@@ -154,7 +154,6 @@ export class APIService {
       const httpOptions = {
         headers: new HttpHeaders({
           'Content-Type': 'application/json',
-          
         })
       }
       return this.http.put(`${this.api}users/${user.id}`,user ,httpOptions);

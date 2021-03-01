@@ -62,8 +62,8 @@
 
                 <!-- Deleted Column -->
                 <ng-container matColumnDef="deleted">
-                    <mat-header-cell class="celdas" *matHeaderCellDef mat-sort-header> Eliminar </mat-header-cell>
-                    <mat-cell class="celdas" *matCellDef="let row"> <button mat-flat-button color="warn" (click)="deleted(row)">Desactivar</button> </mat-cell>
+                    <mat-header-cell class="celdas" *matHeaderCellDef mat-sort-header> Desactivar </mat-header-cell>
+                    <mat-cell class="celdas" *matCellDef="let row"> <button mat-flat-button style="background-color: #515e80; color: white;" (click)="deleted(row)">Desactivar</button> </mat-cell>
                     <mat-footer-cell *matFooterCellDef></mat-footer-cell>
 
                 </ng-container>
@@ -75,7 +75,7 @@
 
                 <ng-container matColumnDef="disclaimer">
                     <mat-footer-cell *matFooterCellDef colspan="2">
-                        <button *ngIf="gradeSelected" mat-raised-button (click)="addSubject()"> Añadir materia </button>
+                        <button *ngIf="gradeSelected" mat-raised-button id="addCourseP" (click)="addSubject()"> Añadir materia </button>
                     </mat-footer-cell>
                 </ng-container>
 
@@ -95,9 +95,9 @@
         <!-- tabla de alumnos -->
         <div class="example-container ">
             <h3 style="text-align: center;">Alumnos</h3>
-            <button mat-raised-button color="primary" (click)="removeSelectedRows()">
-                        Remove Selected Rows
-                      </button>
+            <button mat-raised-button style="background-color: #515e80; color: white;" (click)="removeSelectedRows()">
+                        Remover alumnos seleccionados
+            </button>
             <mat-table mat-table [dataSource]="dataSource" matSort style="overflow: auto; max-height: 300px;">
 
 
@@ -147,14 +147,14 @@
 
                 <ng-container matColumnDef="delet">
                     <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Eliminar </mat-header-cell>
-                    <mat-cell *matCellDef="let row"> <button mat-raised-button color="warn" (click)="deleteStudent(row)"> Eliminar</button> </mat-cell>
+                    <mat-cell *matCellDef="let row"> <button mat-raised-button style="background-color: #515e80; color: white;" (click)="deleteStudent(row)"> Eliminar</button> </mat-cell>
                     <mat-footer-cell *matFooterCellDef></mat-footer-cell>
                 </ng-container>
 
                 <!-- Disclaimer column -->
                 <ng-container matColumnDef="disclaimer">
                     <mat-cell mat-footer-cell *matFooterCellDef colspan="2">
-                        <button *ngIf="gradeSelected && groupSelected" mat-raised-button (click)="addStudent()"> Añadir Alumno </button>
+                        <button *ngIf="gradeSelected && groupSelected" mat-raised-button id="addStudentP" (click)="addStudent()"> Añadir Alumno </button>
                     </mat-cell>
                 </ng-container>
 

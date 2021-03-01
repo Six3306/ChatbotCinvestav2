@@ -20,14 +20,14 @@ export const environment = {
     storageBucket: "cinvestavchatbot.appspot.com",
     messagingSenderId: "984782490625",
     appId: "1:984782490625:web:a6f4858d404f307b900400"*/
-    apiKey: "AIzaSyDrw3rUOysLX__KgQez80s1kQz6jdIieMQ",
-    authDomain: "chatbotcinvestav2.firebaseapp.com",
-    databaseURL: "https://chatbotcinvestav2-default-rtdb.firebaseio.com",
-    projectId: "chatbotcinvestav2",
-    storageBucket: "chatbotcinvestav2.appspot.com",
-    messagingSenderId: "492383338406",
-    appId: "1:492383338406:web:68b68b725b8576d8951967",
-    measurementId: "G-XVDNK3XLK8"
+    apiKey: "AIzaSyBVxtwsbQsucNfC5uW9C9i0rY36u9tWt48",
+    authDomain: "chatcinvestav.firebaseapp.com",
+    databaseURL: "https://chatcinvestav-default-rtdb.firebaseio.com",
+    projectId: "chatcinvestav",
+    storageBucket: "chatcinvestav.appspot.com",
+    messagingSenderId: "125345420470",
+    appId: "1:125345420470:web:8046e812a7d9d920e00217",
+    measurementId: "G-JR8NW34GVV"
   },
   token: "tokenPrueba",
 };

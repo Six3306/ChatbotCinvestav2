@@ -14,7 +14,7 @@ export class ValidateUsersComponent implements OnInit {
   /**
    * Columnas a mostrar de los usuarios
    */
-  displayedColumns: string[] = ['id', 'name', 'email','activated', 'type'];
+  displayedColumns: string[] = ['name', 'email','activated', 'type'];
   /**
    * tabla con los valores de los usuarios
    */

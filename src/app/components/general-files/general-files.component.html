@@ -10,15 +10,24 @@
         <!--formulario para enviar nuevos archivos-->
         <form [formGroup]="formFile" autocomplete="off" (ngSubmit)="subirArchivo()" class="md-form">
 
-            <label class="labelEti">Correo de Destino:</label>
-            <input type="email" class="form-control" id="correoDestinity" formControlName="correoDestinity" placeholder="Ingresa el correo al que quieres enviar el archivo (La direccion debe ser la misma a la que se escribió cuando se creó la cuenta)" required />
+            <label class="labelEti">Correo de Destino:</label><br>
+            <mat-form-field class="addrEmail">
+                <input matInput formControlName="correoDestinity" placeholder="Ingresa el correo al que quieres enviar el archivo (La direccion debe ser la misma a la que se escribió cuando se creó la cuenta)" type="email" id="correoDestinity" autocomplete="off" required>
+            </mat-form-field>
+
+            <!-- <input type="email" class="form-control" id="correoDestinity" formControlName="correoDestinity" placeholder="Ingresa el correo al que quieres enviar el archivo (La direccion debe ser la misma a la que se escribió cuando se creó la cuenta)" required /> -->
             <p></p>
-            <label class="labelEti">Descripción del Archivo a Enviar:</label>
-            <textarea type="form-control" class="md-textarea form-control" mdbInput id="description" formControlName="description" placeholder="Ingresa opcionalmente una descripción del archivo a enviar"></textarea>
+
+            <label class="labelEti">Descripción del Archivo a Enviar:</label><br>
+            <mat-form-field class="contentMsg">
+                <textarea matInput formControlName="description" placeholder="Ingresa opcionalmente una descripción del archivo a enviar"></textarea>
+            </mat-form-field>
+
+            <!-- <textarea type="form-control" class="md-textarea form-control" mdbInput id="description" formControlName="description" placeholder="Ingresa opcionalmente una descripción del archivo a enviar"></textarea> -->
             <p></p>
             <input class="file-input" type="file" formControlName="archivo" (change)="cambioArchivo($event)">
             <p></p>
-            <button [disabled]="!formFile.valid" class="btn btn-info">Subir archivo</button>
+            <button [disabled]="!formFile.valid" class="uploadFileBtn">Subir archivo</button>
         </form>
 
         <button (click)="listar2()" class="btn btn-success" id="btn-refresh">
@@ -31,12 +40,7 @@
     <!--tabla para mostrar los mensajes y archivos que han sido recibidor-->
     <div class="example-container centrado">
         <mat-table mat-table [dataSource]="dataSource" matSort style="max-height: 300px;">
-            <!-- ID LINK -->
-            <ng-container matColumnDef="link">
-                <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Link </mat-header-cell>
-                <mat-cell *matCellDef="let row"> <a href="{{row.url}}">IR</a> </mat-cell>
-                <mat-footer-cell *matFooterCellDef></mat-footer-cell>
-            </ng-container>
+
 
             <!-- Name NOMBRE -->
             <ng-container matColumnDef="name">
@@ -64,6 +68,13 @@
             <ng-container matColumnDef="info">
                 <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Descripción </mat-header-cell>
                 <mat-cell *matCellDef="let row"> {{row.description}} </mat-cell>
+                <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+            </ng-container>
+
+            <!-- ID LINK -->
+            <ng-container matColumnDef="link">
+                <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Link </mat-header-cell>
+                <mat-cell *matCellDef="let row"> <a href="{{row.url}}" class="linkFileD" target="_blank">IR</a> </mat-cell>
                 <mat-footer-cell *matFooterCellDef></mat-footer-cell>
             </ng-container>
 

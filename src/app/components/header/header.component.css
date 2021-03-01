@@ -2,35 +2,58 @@
 .toolbar {
     background-color: #1D2B46;
     color: white;
+    width: 100%;
+    max-height: 1.8%!important;
 }
 
-#tituloHeader {
+.navbar-nav {
+    float: right;
+    font-size: 18px;
+}
+
+#exitAccount:hover {
+    color: hsl(357, 73%, 40%);
+    border-bottom-style: solid;
+    border-bottom-color: hsl(357, 63%, 87%);
     cursor: pointer;
 }
 
-.example-icon {
-    padding: 0 14px;
+#adminUsers,
+#adminCourStud,
+#adminRemind,
+#goToGeneralFiles,
+#goToChatbot,
+#goToScoresUsers,
+#exitAccount {
+    transition: color 0.2s linear 0.2s;
 }
 
-.example-spacer {
-    flex: 1 1 auto;
+#adminCourStud:hover,
+#adminUsers:hover,
+#adminRemind:hover,
+#goToGeneralFiles:hover,
+#goToChatbot:hover,
+#goToScoresUsers:hover {
+    color: hsl(233, 18%, 81%);
+    cursor: pointer;
 }
 
-.logoCinvestav {
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url('/assets/pictures/logocinves2.ico');
-    width: 42px;
-    height: 35px;
+.logoP {
+    width: 210px;
+    height: 100px;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+#avatar {
+    max-width: 50px!important;
+    max-height: 50px!important;
     border-radius: 100%;
-    margin-right: 1%;
-}
-
-#tituloHeader {
-    font-size: 25px;
-}
-
-.opcionMenu {
-    font-size: 17px;
-    color: #dbdfe6;
+    cursor: pointer;
+    margin-top: 0%;
+    margin-right: 2%;
+    float: right;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #3A445D;
 }

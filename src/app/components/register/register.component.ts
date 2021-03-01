@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { APIService } from 'src/app/services/api/api.service';
@@ -10,7 +10,8 @@ import { FirebaseService } from 'src/app/services/firebase/firebase.service';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  providers: [MatSnackBar]
+  providers: [MatSnackBar],
+  encapsulation: ViewEncapsulation.None,
 })
 
 
@@ -51,7 +52,7 @@ export class RegisterComponent implements OnInit {
     private dialog: MatDialog,
     private firabse: FirebaseService,
     private snackBar: MatSnackBar,
-  ) { 
+  ) {  
     this.formRegister = this.formbuilder.group({
       username : ['',Validators.required],
       lastNameFather : ['', Validators.required],

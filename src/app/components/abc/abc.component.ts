@@ -7,11 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AbcComponent implements OnInit {
 
-  contenido;
+  nowYear;
 
   constructor() { }
 
   ngOnInit() {
+
+    var fecha = new Date();
+
+    this.nowYear = fecha.getFullYear();
+
+    // fecha
 
     // //admin.initializeApp(firebaseConfig);
     // // var database = firebase.database();

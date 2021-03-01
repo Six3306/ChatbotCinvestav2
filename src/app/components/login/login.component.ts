@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { APIService } from 'src/app/services/api/api.service';
@@ -10,6 +10,7 @@ import {MatSnackBar} from '@angular/material';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
   providers: [MatSnackBar],
+  encapsulation: ViewEncapsulation.None,
 })
 export class LoginComponent implements OnInit {
   /**

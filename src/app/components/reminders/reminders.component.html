@@ -31,11 +31,10 @@
 
             <!-- ID Column -->
             <ng-container matColumnDef="delet">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTab"><strong> Activado </strong></th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTab"><strong> Estatus </strong></th>
                 <td mat-cell *matCellDef="let row">
-                    <p *ngIf="row.delet==0"><button mat-flat-button style="background-color: 
-                        #4CAF50; color: white; " (click)="changeActivated(true,row)">Activar</button></p>
-                    <p *ngIf="row.delet==1"><button mat-flat-button color="warn" (click)="changeActivated(false,row)">Desactivar</button></p>
+                    <p *ngIf="row.delet==0"><button mat-flat-button style="background-color: #ccd5ec; color: black;" (click)="changeActivated(true,row)">Activar</button></p>
+                    <p *ngIf="row.delet==1"><button mat-flat-button style="background-color: #515e80; color: white;" (click)="changeActivated(false,row)">Desactivar</button></p>
                 </td>
             </ng-container>
 
@@ -52,10 +51,15 @@
 
     <!--AGREGAR NUEVOS AVISOS-->
     <br><br>
-    <textarea ng-model="myTextArea" [(ngModel)]="textAreaReminder" id="textAreaReminder" placeholder="Ingresa el aviso a registrar"></textarea>
+
+    <mat-form-field class="contentMsg">
+        <textarea matInput id="textAreaReminder" [(ngModel)]="textAreaReminder" placeholder="Ingresa el aviso a registrar"></textarea>
+    </mat-form-field>
+
+    <!-- <textarea ng-model="myTextArea" [(ngModel)]="textAreaReminder" id="textAreaReminder" placeholder="Ingresa el aviso a registrar"></textarea> -->
 
     <br><br>
-    <button class="btn btn-info centrado" (click)="registerReminder()">Registrar Aviso</button>
+    <button class="btn btn-info centrado" id="btnAddRemind" (click)="registerReminder()">Registrar Aviso</button>
     <!-- <button class="btn btn-info centrado" (click)="openSnackBar('Mensaje a poner','X')">NOTI</button> -->
     <!-- <button class="btn btn-info centrado" (click)="openCustomerSnackBar()">MOSTRAR</button> -->
     <!--AGREGAR NUEVOS AVISOS-->
